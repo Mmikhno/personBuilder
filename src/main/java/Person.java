@@ -22,7 +22,7 @@ public class Person {
     }
 
     public boolean hasAddress() {
-        return address.equals(null) ? false : true;
+        return (address == null ? false : true);
     }
 
     public String getName() {
@@ -34,6 +34,9 @@ public class Person {
     }
 
     public OptionalInt getAge() {
+        if (!OptionalInt.of(age).isPresent()) {
+            return OptionalInt.empty();
+        }
         return OptionalInt.of(age);
     }
 

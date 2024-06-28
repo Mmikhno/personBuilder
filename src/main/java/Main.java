@@ -10,7 +10,7 @@ public class Main {
                 .setName("Anton")
                 .setAge(2)
                 .build();
-        System.out.println("У " + mom + " есть сын, " + son);
+
         try {
             // Не хватает обязательных полей
             new Person.ConcretePersonBuilder().build();
